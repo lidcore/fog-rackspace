@@ -119,8 +119,8 @@ module Fog
         # @return [Fog::Storage::Rackspace::Account] account details object
         def account
           account = Fog::Storage::Rackspace::Account.new(:service => self)
-          account.reload
           account.meta_temp_url_key = @rackspace_temp_url_key
+          account.reload
         end
       end
 
